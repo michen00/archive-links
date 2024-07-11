@@ -1,0 +1,11 @@
+[project]
+name = "archive-links"
+version = "0.0.0"
+authors = [{ name = "Michael I Chen", email = "michael.chen.0@gmail.com" }]
+description = "archive URLs on a schedule"
+readme = "README.md"
+dependencies = ["rxv @ git+https://github.com/michen00/rxv@main"]
+requires-python = ">=3.11,<3.14"
+
+[project.urls]
+Homepage = "https://github.com/michen00/archive-links"

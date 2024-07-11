@@ -1,0 +1,30 @@
+name: Archive links
+
+on:
+  schedule:
+    - cron: "0 0 15 * *" # Runs at midnight on the 15th of every month
+
+jobs:
+  archive-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Archive links in manifest
+        run: cat manifest.txt | xargs -n 1 -P 4 rxv
+
+      - name: Upload log
+        uses: actions/upload-artifact@v3
+        with:
+          name: log
+          path: "*.log"
