@@ -1,6 +1,6 @@
 # archive-links
 
-a simple archival tool for capturing snapshots on a a schedule
+a simple archival tool for capturing snapshots on a schedule
 
 ## Usage
 
