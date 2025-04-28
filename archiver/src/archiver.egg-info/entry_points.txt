@@ -1,0 +1,3 @@
+[console_scripts]
+archiver = archiver.cli:main
+pdfs2txt = archiver.pdfs2txt:main

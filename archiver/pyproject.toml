@@ -1,0 +1,20 @@
+[project]
+name = "archiver"
+version = "0.1.0"
+description = "Library for archiving URLs with multiple archival services"
+authors = [{ name = "Michael I Chen", email = "michael.chen.0@gmail.com" }]
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "aiohttp>=3.8.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "PyPDF2>=3.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=42.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+archiver = "archiver.cli:main"
+pdfs2txt = "archiver.pdfs2txt:main"

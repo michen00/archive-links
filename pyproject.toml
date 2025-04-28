@@ -1,11 +1,25 @@
 [project]
 name = "archive-links"
-version = "0.0.0"
+version = "0.1.0"
 authors = [{ name = "Michael I Chen", email = "michael.chen.0@gmail.com" }]
 description = "archive URLs on a schedule"
 readme = "README.md"
-dependencies = ["rxv @ git+https://github.com/michen00/rxv@main"]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "PyPDF2>=3.0.0",
+    "rxv @ git+https://github.com/michen00/rxv@main",
+]
 requires-python = ">=3.11,<3.14"
 
 [project.urls]
 Homepage = "https://github.com/michen00/archive-links"
+
+[project.scripts]
+archive-links = "archiver.cli:main"
+pdfs2txt = "archiver.pdfs2txt:main"
+
+[build-system]
+requires = ["setuptools>=42.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

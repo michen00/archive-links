@@ -1,0 +1,12 @@
+pyproject.toml
+src/archiver/__init__.py
+src/archiver/archiver.py
+src/archiver/cli.py
+src/archiver/pdfs2txt.py
+src/archiver/services.py
+src/archiver.egg-info/PKG-INFO
+src/archiver.egg-info/SOURCES.txt
+src/archiver.egg-info/dependency_links.txt
+src/archiver.egg-info/entry_points.txt
+src/archiver.egg-info/requires.txt
+src/archiver.egg-info/top_level.txt
